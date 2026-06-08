@@ -62,7 +62,20 @@
 </head>
 
 <p><a href="U12 Knights.html">View Album 2</a></p>
-    
+
+    <script>
+  const gallery2 = document.getElementById("gallery2");
+
+  const album2 = [
+    // your real filenames go here
+  ];
+
+  album2.forEach(file => {
+    const img = document.createElement("img");
+    img.src = "photos/Chelsea U12 Knights/" + file;
+    gallery2.appendChild(img);
+  });
+</script>
     
 <body>
 
