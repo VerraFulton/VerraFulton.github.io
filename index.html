@@ -61,23 +61,10 @@
 </style>
 </head>
 
-<p><a href="U12 Knights.html">View Album 2</a></p>
-
-    <script>
-  const gallery2 = document.getElementById("gallery2");
-
-  const album2 = [
-    // your real filenames go here
-  ];
-
-  album2.forEach(file => {
-    const img = document.createElement("img");
-    img.src = "photos/Chelsea U12 Knights/" + file;
-    gallery2.appendChild(img);
-  });
-</script>
-    
 <body>
+
+<!-- Link to U12 Knights Album -->
+<p><a href="U12 Knights.html">View Album 2</a></p>
 
 <header>Chelsea Cobras U9s</header>
 
@@ -86,13 +73,14 @@
 <div class="section">
     <h2>Photo Gallery</h2>
     <p>Our boys in action!</p>
-<div class="gallery" id="gallery"></div>
+
+    <div class="gallery" id="gallery"></div>
+</div>
 
 <script>
-  // Automatically load every image in the /photos folder
+  // Load U9 images
   const gallery = document.getElementById("gallery");
 
-  // List every filename here — add as many as you want
   const images = [
     "DSC_0314.JPG",
     "DSC_0315.JPG",
@@ -125,11 +113,10 @@
 
   images.forEach(file => {
     const img = document.createElement("img");
-    img.src = "photos/" + file;
+    img.src = "photos/Chelsea U9 Cobras/" + file;
     gallery.appendChild(img);
   });
 </script>
-</div>
 
 <footer>
     © 2026 Vizavee
