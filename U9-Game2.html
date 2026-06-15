@@ -1,1 +1,45 @@
+<script>
+  const gallery = document.getElementById("gallery");
 
+  const images = [
+    "DSC_0142.JPG",
+    "DSC_0145.JPG",
+    "DSC_0146.JPG",
+    "DSC_0167.JPG",
+    "DSC_0178.JPG",
+    "DSC_0179.JPG",
+    "DSC_0180.JPG",
+    "DSC_0181.JPG",
+    "DSC_0189.JPG",
+    "DSC_0191.JPG",
+    "DSC_0193.JPG",
+    "DSC_0214.JPG",
+    "DSC_0215.JPG",
+    "DSC_0216.JPG",
+    "DSC_0221.JPG",
+    "DSC_0228.JPG",
+    "DSC_0230.JPG",
+    "DSC_0239.JPG",
+    "DSC_0240.JPG",
+    "DSC_0241.JPG",
+    "DSC_0245.JPG",
+    "DSC_0247.JPG",
+    "DSC_0254.JPG",
+    "DSC_0267.JPG",
+    "DSC_0289.JPG",
+    "DSC_0297.JPG",
+    "DSC_0310.JPG",
+    "DSC_0311.JPG",
+    "DSC_0313.JPG",
+    "DSC_0314.JPG",
+    "DSC_0319.JPG",
+    "DSC_0327.JPG",
+    "DSC_0337.JPG"
+  ];
+
+  images.forEach(file => {
+    const img = document.createElement("img");
+    img.src = "photos/Chelsea%20U9%20Cobras/Game%201%20-%20Cobras%20vs.%20Seaford/" + file;
+    gallery.appendChild(img);
+  });
+</script>
