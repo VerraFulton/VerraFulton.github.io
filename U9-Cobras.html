@@ -1,106 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chelsea U9 Cobras – Games</title>
+<meta charset="UTF-8">
+<title>Chelsea U9 Cobras – Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
+<style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0033A0; /* Royal Blue */
-      color: white;
-      text-align: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0033A0; /* Royal Blue */
+        color: white;
+        text-align: center;
+        padding-bottom: 40px;
     }
 
     header {
-      background: #00246B; /* Darker royal blue */
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: 4px solid white;
+        background: #ffcc00;
+        padding: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
-    header img {
-      height: 140px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .game-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
+    .games {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
     }
 
     .game-card {
-      width: 260px;
-      background: rgba(255,255,255,0.12);
-      padding: 15px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      transition: 0.2s;
-      border: 2px solid white;
-    }
-
-    .game-card:hover {
-      background: rgba(255,255,255,0.22);
-      transform: scale(1.04);
+        background: #002b80;
+        padding: 15px;
+        border-radius: 12px;
+        border: 4px solid #ffcc00;
     }
 
     .game-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 2px solid white;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 3px solid #ffcc00;
     }
 
-    footer {
-      margin: 40px 0 20px;
-      opacity: 0.7;
+    .game-card a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
     }
-  </style>
+</style>
 </head>
 
 <body>
 
-<header>
-  <!-- Insert your logo file here -->
-  <img src="photos/Chelsea%20U9%20Cobras/logo.jpeg" alt="Cobras Logo">
-  <h1>Chelsea U9 Cobras</h1>
-</header>
+<header>Chelsea U9 Cobras – Games</header>
 
-<div class="game-grid">
+<div class="games">
 
-  <!-- Game 1 -->
-  <a class="game-card" href="U9-Game1.html">
-    <img src="photos/Chelsea%20U9%20Cobras/Game%201%20-%20Cobras%20vs.%20Aspendale/DSC_0314.JPG">
-    <h3>Game 1 – Cobras vs Aspendale</h3>
-  </a>
+    <!-- GAME 1 -->
+    <div class="game-card">
+        <a href="U9-Game1.html">
+            <img src="photos/Chelsea%20U9%20Cobras/Game%201%20-%20Cobras%20vs.%20Aspendale/DSC_0001.JPG" alt="Game 1 Thumbnail">
+            Game 1 – Cobras vs Aspendale
+        </a>
+    </div>
 
-  <!-- Game 2 -->
-  <a class="game-card" href="U9-Game2.html">
-    <img src="photos/Chelsea%20U9%20Cobras/Game%202%20-%20Cobras%20vs.%20Seaford/DSC_0401.JPG">
-    <h3>Game 2 – Cobras vs Seaford</h3>
-  </a>
+    <!-- GAME 2 -->
+    <div class="game-card">
+        <a href="U9-Game2.html">
+            <img src="photos/Chelsea%20U9%20Cobras/Game%202%20-%20Cobras%20vs.%20Seaford/DSC_0142.JPG" alt="Game 2 Thumbnail">
+            Game 2 – Cobras vs Seaford
+        </a>
+    </div>
 
 </div>
-
-<footer>
-  © 2026 Vizavee
-</footer>
 
 </body>
 </html>
