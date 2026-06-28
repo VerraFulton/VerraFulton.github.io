@@ -1,84 +1,113 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Album 2 – Chelsea Cobras U9s</title>
+<title>Chelsea U12 Knights – Games</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        color: #222;
-    }
-    header {
-        background: #ffcc00;
-        padding: 20px;
+        background: #0033A0; /* Royal Blue */
+        color: white;
         text-align: center;
+        padding-bottom: 40px;
+    }
+
+    header {
+        background: #0033A0;
+        padding: 20px;
         font-size: 32px;
         font-weight: bold;
-        color: #003366;
-        letter-spacing: 2px;
+        color: white;
         text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 3px solid white;
     }
-    .section {
-        padding: 30px;
-        text-align: center;
+
+    .logo {
+        width: 120px;
+        margin-top: 15px;
     }
-    .section h2 {
-        color: #003366;
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-    .gallery {
+
+    .games {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
         padding: 20px;
+        max-width: 900px;
+        margin: auto;
     }
-    .gallery img {
+
+    .game-card {
+        background: #002b80;
+        padding: 15px;
+        border-radius: 12px;
+        border: 3px solid white;
+    }
+
+    .game-card img {
         width: 100%;
         border-radius: 10px;
-        border: 4px solid #ffcc00;
+        object-fit: cover;
+        border: 3px solid white;
     }
-    a.back {
-        display: inline-block;
-        margin-top: 20px;
-        font-size: 18px;
-        color: #003366;
+
+    .game-card a {
         text-decoration: none;
+        color: white;
+        font-size: 20px;
         font-weight: bold;
+        display: block;
+        margin-top: 10px;
     }
 </style>
 </head>
 
 <body>
 
-<header>Chelsea Knights U12</header>
+<header>
+    Chelsea U12 Knights
+    <br>
+    <img class="logo" src="photos/Chelsea%20U12%20Knights/logo.jpeg" alt="Knights Logo">
+</header>
 
-<div class="section">
-    <h2>Chelsea vs. Aspendale</h2>
-    <p> some happy snaps</p>
+<div class="games">
 
-    <div class="gallery" id="gallery2"></div>
+    <!-- GAME 1 -->
+    <div class="game-card">
+        <a href="U12-Game1.html">
+            <img src="photos/Chelsea%20U12%20Knights/Game%201%20-%20Knights%20vs.%20Aspendale/DSC_0082.JPG" alt="Game 1 Thumbnail">
+            Game 1 – Knights vs Aspendale
+        </a>
+    </div>
 
-    <a class="back" href="index.html">← Back to Home</a>
+    <!-- GAME 2 -->
+    <div class="game-card">
+        <a href="U12-Game2.html">
+            <img src="photos/Chelsea%20U12%20Knights/Game%202%20-%20Knights%20vs.%20Seaford/DSC_0015.JPG" alt="Game 2 Thumbnail">
+            Game 2 – Knights vs Seaford
+        </a>
+    </div>
+
+    <!-- GAME 3 -->
+    <div class="game-card">
+        <a href="U12-Game3.html">
+            <img src="photos/Chelsea%20U12%20Knights/Game%203%20-%20Knights%20vs.%20Barton/DSC_0131.JPG" alt="Game 3 Thumbnail">
+            Game 3 – Knights vs Barton
+        </a>
+    </div>
+
+    <!-- GAME 4 -->
+    <div class="game-card">
+        <a href="U12-Game4.html">
+            <img src="photos/Chelsea%20U12%20Knights/Game%204%20-%20Knights%20vs.%20Casey/DSC_0293.JPG" alt="Game 4 Thumbnail">
+            Game 4 – Knights vs Casey
+        </a>
+    </div>
+
 </div>
-
-<script>
-  const gallery2 = document.getElementById("gallery2");
-
-  const album2 = [
-    // I will fill this with your real filenames once you upload them
-  ];
-
-  album2.forEach(file => {
-    const img = document.createElement("img");
-    img.src = "album2/" + file;
-    gallery2.appendChild(img);
-  });
-</script>
 
 </body>
 </html>
