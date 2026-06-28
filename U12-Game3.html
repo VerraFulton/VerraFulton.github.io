@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>U12 Knights – Game 3 vs Barton</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0033A0; /* Royal Blue */
+        color: white;
+        text-align: center;
+    }
+
+    header {
+        background: #0033A0;
+        padding: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 3px solid white;
+    }
+
+    .logo {
+        width: 120px;
+        margin-top: 10px;
+    }
+
+    .section-title {
+        font-size: 26px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        border: 3px solid white;
+        object-fit: cover;
+    }
+
+    a.back {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: white;
+        color: #0033A0;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    U12 Knights – Game 3<br>
+    Knights vs Barton
+    <br>
+    <img class="logo" src="photos/Chelsea%20U12%20Knights/logo.jpeg" alt="Knights Logo">
+</header>
+
+<div class="section-title">Game 3 Photo Gallery</div>
+
+<div class="gallery" id="gallery"></div>
+
+<a class="back" href="U12-Knights.html">← Back to Knights Home</a>
+
+<script>
+    const gallery = document.getElementById("gallery");
+
+    // List every photo in the Game 3 folder
+    const photos = [
+        "DSC_0131.JPG",
+        "DSC_0132.JPG",
+        "DSC_0133.JPG",
+        "DSC_0134.JPG",
+        "DSC_0135.JPG",
+        "DSC_0136.JPG",
+        "DSC_0137.JPG",
+        "DSC_0138.JPG",
+        "
