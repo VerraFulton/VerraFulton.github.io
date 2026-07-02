@@ -1,139 +1,166 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>U12 Knights – Game 1 vs Aspendale</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game 1 - Knights vs. Aspendale</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0033A0; /* Royal Blue */
-        color: white;
-        text-align: center;
-    }
+/* --- Gallery Grid --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 20px;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+.gallery img:hover {
+  opacity: 0.8;
+}
 
-    header {
-        background: #0033A0;
-        padding: 20px;
-        font-size: 30px;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-bottom: 3px solid white;
-    }
+/* --- Lightbox Background --- */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
-    .logo {
-        width: 120px;
-        margin-top: 10px;
-    }
+/* --- Lightbox Image --- */
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease;
+}
 
-    .section-title {
-        font-size: 26px;
-        margin-top: 25px;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
+/* --- Fade-in Animation --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
 
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
-        padding: 20px;
-        max-width: 1000px;
-        margin: auto;
-    }
-
-    .gallery img {
-        width: 100%;
-        border-radius: 10px;
-        border: 3px solid white;
-        object-fit: cover;
-    }
-
-    a.back {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: white;
-        color: #0033A0;
-        font-weight: bold;
-        border-radius: 8px;
-        text-decoration: none;
-    }
+/* --- Navigation Arrows --- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 20px;
+}
+#prev { left: 20px; }
+#next { right: 20px; }
+.arrow:hover { color: #ccc; }
 </style>
 </head>
 
 <body>
 
-<header>
-    U12 Knights – Game 1<br>
-    Knights vs Aspendale
-    <br>
-    <img class="logo" src="photos/Chelsea%20U12%20Knights/logo.jpeg" alt="Knights Logo">
-</header>
+<div class="gallery">
+  <!-- Thumbnails generated for DSC_0082.JPG → DSC_0123.JPG -->
+  <!-- Thumbs = .jpg | Full = .JPG -->
 
-<div class="section-title">Game 1 Photo Gallery</div>
 
-<div class="gallery" id="gallery"></div>
+  <!-- 42 thumbnails -->
+  <!-- START -->
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0082.jpg" onclick="openLightbox('DSC_0082.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0083.jpg" onclick="openLightbox('DSC_0083.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0084.jpg" onclick="openLightbox('DSC_0084.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0085.jpg" onclick="openLightbox('DSC_0085.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0086.jpg" onclick="openLightbox('DSC_0086.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0087.jpg" onclick="openLightbox('DSC_0087.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0088.jpg" onclick="openLightbox('DSC_0088.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0089.jpg" onclick="openLightbox('DSC_0089.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0090.jpg" onclick="openLightbox('DSC_0090.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0091.jpg" onclick="openLightbox('DSC_0091.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0092.jpg" onclick="openLightbox('DSC_0092.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0093.jpg" onclick="openLightbox('DSC_0093.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0094.jpg" onclick="openLightbox('DSC_0094.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0095.jpg" onclick="openLightbox('DSC_0095.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0096.jpg" onclick="openLightbox('DSC_0096.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0097.jpg" onclick="openLightbox('DSC_0097.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0098.jpg" onclick="openLightbox('DSC_0098.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0099.jpg" onclick="openLightbox('DSC_0099.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0100.jpg" onclick="openLightbox('DSC_0100.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0101.jpg" onclick="openLightbox('DSC_0101.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0102.jpg" onclick="openLightbox('DSC_0102.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0103.jpg" onclick="openLightbox('DSC_0103.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0104.jpg" onclick="openLightbox('DSC_0104.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0105.jpg" onclick="openLightbox('DSC_0105.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0106.jpg" onclick="openLightbox('DSC_0106.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0107.jpg" onclick="openLightbox('DSC_0107.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0108.jpg" onclick="openLightbox('DSC_0108.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0109.jpg" onclick="openLightbox('DSC_0109.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0110.jpg" onclick="openLightbox('DSC_0110.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0111.jpg" onclick="openLightbox('DSC_0111.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0112.jpg" onclick="openLightbox('DSC_0112.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0113.jpg" onclick="openLightbox('DSC_0113.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0114.jpg" onclick="openLightbox('DSC_0114.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0115.jpg" onclick="openLightbox('DSC_0115.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0116.jpg" onclick="openLightbox('DSC_0116.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0117.jpg" onclick="openLightbox('DSC_0117.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0118.jpg" onclick="openLightbox('DSC_0118.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0119.jpg" onclick="openLightbox('DSC_0119.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0120.jpg" onclick="openLightbox('DSC_0120.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0121.jpg" onclick="openLightbox('DSC_0121.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0122.jpg" onclick="openLightbox('DSC_0122.JPG')">
+  <img src="photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/thumbs/DSC_0123.jpg" onclick="openLightbox('DSC_0123.JPG')">
+</div>
 
-<a class="back" href="U12-Knights.html">← Back to Knights Home</a>
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox(event)">
+  <span id="prev" class="arrow" onclick="event.stopPropagation(); changeImage(-1)">&#10094;</span>
+  <img id="lightbox-img">
+  <span id="next" class="arrow" onclick="event.stopPropagation(); changeImage(1)">&#10095;</span>
+</div>
 
 <script>
-    const gallery = document.getElementById("gallery");
+let images = [
+  "DSC_0082.JPG","DSC_0083.JPG","DSC_0084.JPG","DSC_0085.JPG","DSC_0086.JPG",
+  "DSC_0087.JPG","DSC_0088.JPG","DSC_0089.JPG","DSC_0090.JPG","DSC_0091.JPG",
+  "DSC_0092.JPG","DSC_0093.JPG","DSC_0094.JPG","DSC_0095.JPG","DSC_0096.JPG",
+  "DSC_0097.JPG","DSC_0098.JPG","DSC_0099.JPG","DSC_0100.JPG","DSC_0101.JPG",
+  "DSC_0102.JPG","DSC_0103.JPG","DSC_0104.JPG","DSC_0105.JPG","DSC_0106.JPG",
+  "DSC_0107.JPG","DSC_0108.JPG","DSC_0109.JPG","DSC_0110.JPG","DSC_0111.JPG",
+  "DSC_0112.JPG","DSC_0113.JPG","DSC_0114.JPG","DSC_0115.JPG","DSC_0116.JPG",
+  "DSC_0117.JPG","DSC_0118.JPG","DSC_0119.JPG","DSC_0120.JPG","DSC_0121.JPG",
+  "DSC_0122.JPG","DSC_0123.JPG"
+];
 
-    // List every photo in the Game 1 folder
-    const photos = [
-        "DSC_0082.JPG",
-        "DSC_0083.JPG",
-        "DSC_0084.JPG",
-        "DSC_0085.JPG",
-        "DSC_0086.JPG",
-        "DSC_0087.JPG",
-        "DSC_0088.JPG",
-        "DSC_0089.JPG",
-        "DSC_0090.JPG",
-        "DSC_0091.JPG",
-        "DSC_0092.JPG",
-        "DSC_0093.JPG",
-        "DSC_0094.JPG",
-        "DSC_0095.JPG",
-        "DSC_0096.JPG",
-        "DSC_0097.JPG",
-        "DSC_0098.JPG",
-        "DSC_0099.JPG",
-        "DSC_0100.JPG",
-        "DSC_0101.JPG",
-        "DSC_0102.JPG",
-        "DSC_0103.JPG",
-        "DSC_0104.JPG",
-        "DSC_0105.JPG",
-        "DSC_0106.JPG",
-        "DSC_0107.JPG",
-        "DSC_0108.JPG",
-        "DSC_0109.JPG",
-        "DSC_0110.JPG",
-        "DSC_0111.JPG",
-        "DSC_0112.JPG",
-        "DSC_0113.JPG",
-        "DSC_0114.JPG",
-        "DSC_0115.JPG",
-        "DSC_0116.JPG",
-        "DSC_0117.JPG",
-        "DSC_0118.JPG",
-        "DSC_0119.JPG",
-        "DSC_0120.JPG",
-        "DSC_0121.JPG",
-        "DSC_0122.JPG",
-        "DSC_0123.JPG"
-    ];
+let currentIndex = 0;
 
-    photos.forEach(file => {
-        const img = document.createElement("img");
-        img.src = "photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/" + file;
-        gallery.appendChild(img);
-    });
+function openLightbox(filename) {
+  currentIndex = images.indexOf(filename);
+  document.getElementById("lightbox-img").src =
+    `photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/${filename}`;
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox(e) {
+  if (e.target.id === "lightbox") {
+    document.getElementById("lightbox").style.display = "none";
+  }
+}
+
+function changeImage(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+
+  document.getElementById("lightbox-img").src =
+    `photos/Chelsea U12 Knights/Game 1 - Knights vs. Aspendale/${images[currentIndex]}`;
+}
 </script>
 
 </body>
