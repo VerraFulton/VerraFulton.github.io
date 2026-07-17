@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Game 3 – Cobras vs Casey Bilbies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0033A0; /* Royal Blue */
+        color: white;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    header {
+        background: #0033A0;
+        padding: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 3px solid white;
+    }
+
+    h2 {
+        margin-top: 30px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        border: 3px solid white;
+        object-fit: cover;
+    }
+
+    a.back {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>Game 5 – Cobras vs Chelsea Rockets</header>
+
+<h2>Photo Gallery</h2>
+
+<div class="gallery" id="gallery"></div>
+
+<a class="back" href="U9-Cobras.html">← Back to Cobras Landing Page</a>
+
+<script>
+  const gallery = document.getElementById("gallery");
+
+  const images = [
+    "DSC_0022.JPG",
+    "DSC_0023.JPG",
+    "DSC_0026.JPG",
+    "DSC_0035.JPG",
+    "DSC_0042.JPG",
+    "DSC_0052.JPG",
+    "DSC_0053.JPG",
+    "DSC_0054.JPG",
+    "DSC_0057.JPG",
+    "DSC_0060.JPG",
+    "DSC_0061.JPG",
+    "DSC_0063.JPG",
+    "DSC_0066.JPG",
+    "DSC_0067.JPG",
+    "DSC_0073.JPG",
+    "DSC_0079.JPG",
+    "DSC_0080.JPG",
+    "DSC_0082.JPG",
+    "DSC_0084.JPG",
+    "DSC_0087.JPG",
+    "DSC_0091.JPG",
+    "DSC_0093.JPG",
+    "DSC_0097.JPG",
+    "DSC_0100.JPG",
+    "DSC_0110.JPG",
+    "DSC_0111.JPG",
+"DSC_0100.JPG",
+"DSC_0100.JPG",
+      ];
+
+  images.forEach(file => {
+    const img = document.createElement("img");
+    img.src = "photos/Chelsea%20U9%20Cobras/Game%203%20-%20Cobras%20vs.%20Bilbies/" + file;
+    gallery.appendChild(img);
+  });
+</script>
+
+</body>
+</html>
