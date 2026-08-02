@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Game 8 – Cobras vs Hampton Park Sparrows</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0033A0; /* Royal Blue */
+        color: white;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    header {
+        background: #0033A0;
+        padding: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 3px solid white;
+    }
+
+    h2 {
+        margin-top: 30px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        border: 3px solid white;
+        object-fit: cover;
+    }
+
+    a.back {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>Game 8 – Cobras vs Hampton Park Sparrows</header>
+
+<h2>Photo Gallery</h2>
+
+<div class="gallery" id="gallery"></div>
+
+<a class="back" href="U9-Cobras.html">← Back to Cobras Landing Page</a>
+
+<script>
+  const gallery = document.getElementById("gallery");
+
+const images = [
+  "DSC_0030.jpg",
+  "DSC_0042.jpg",
+  "DSC_0057.jpg",
+  "DSC_0058.jpg",
+  "DSC_0067.jpg",
+  "DSC_0074.jpg",
+  "DSC_0095.jpg",
+  "DSC_0109.jpg",
+  "DSC_0110.jpg",
+  "DSC_0113.jpg",
+  "DSC_0120.jpg",
+  "DSC_0123.jpg",
+  "DSC_0127.jpg",
+  "DSC_0139.jpg",
+  "DSC_0142.jpg",
+  "DSC_0174.jpg",
+  "DSC_0178.jpg",
+  "DSC_0181.jpg",
+  "DSC_0183.jpg",
+  "DSC_0184.jpg",
+  "DSC_0194.jpg",
+  "DSC_0195.jpg",
+  "DSC_0197.jpg",
+  "DSC_0199.JPG",
+  "DSC_0200.jpg",
+  "DSC_0214.jpg",
+  "DSC_0217.jpg",
+  "DSC_0242.jpg",
+  "DSC_0288.jpg",
+  "DSC_0297.jpg",
+  "DSC_0321.jpg",
+  "DSC_0323.jpg",
+  "DSC_0328.jpg",
+  "DSC_0335.jpg",
+  "DSC_0340.jpg",
+  "DSC_0344.jpg",
+  "DSC_0347.jpg",
+  "DSC_0022.jpg",
+  "DSC_0023.jpg",
+  "DSC_0028.jpg"
+];
+
+  images.forEach(file => {
+    const img = document.createElement("img");
+    img.src = "photos/Chelsea%20U9%20Cobras/Game%208/" + file;
+    gallery.appendChild(img);
+  });
+</script>
+
+</body>
+</html>
