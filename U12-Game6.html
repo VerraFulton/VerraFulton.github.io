@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>U12 Knights – Game 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0033A0; /* Royal Blue */
+        color: white;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    header {
+        background: #0033A0;
+        padding: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 3px solid white;
+    }
+
+    h2 {
+        margin-top: 30px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        border: 3px solid white;
+        object-fit: cover;
+    }
+
+    a.back {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .logo {
+        width: 120px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>U12 Knights – Game 6</header>
+
+<img class="logo" src="photos/Chelsea U12 Knights/logo.jpeg" alt="Team Logo">
+
+<h2>Photo Gallery</h2>
+
+<div class="gallery" id="gallery"></div>
+
+<a class="back" href="U12-Knights.html">← Back to Knights Landing Page</a>
+
+<script>
+  const gallery = document.getElementById("gallery");
+
+  const images = [
+    "DSC_0400.jpg","DSC_0401.jpg","DSC_0402.jpg","DSC_0413.jpg","DSC_0414.jpg",
+    "DSC_0418.jpg","DSC_0422.jpg","DSC_0423.jpg","DSC_0424.jpg","DSC_0427.jpg",
+    "DSC_0430.jpg","DSC_0432.jpg","DSC_0433.jpg","DSC_0435.jpg","DSC_0438.jpg",
+    "DSC_0439.jpg","DSC_0443.jpg","DSC_0456.jpg","DSC_0459.jpg","DSC_0461.jpg",
+    "DSC_0465.jpg","DSC_0472.jpg","DSC_0473.jpg","DSC_0474.jpg","DSC_0475.jpg",
+    "DSC_0477.jpg","DSC_0485.jpg","DSC_0487.jpg","DSC_0494.jpg","DSC_0497.jpg",
+    "DSC_0498.jpg","DSC_0499.jpg","DSC_0501.jpg","DSC_0502.jpg","DSC_0503.jpg",
+    "DSC_0511.jpg","DSC_0512.jpg","DSC_0516.jpg","DSC_0517.jpg","DSC_0519.jpg",
+    "DSC_0522.jpg","DSC_0542.jpg","DSC_0547.jpg","DSC_0548.jpg","DSC_0552.jpg",
+    "DSC_0553.jpg","DSC_0554.jpg","DSC_0556.jpg","DSC_0562.jpg","DSC_0563.jpg",
+    "DSC_0564.jpg","DSC_0566.jpg","DSC_0568.jpg","DSC_0581.jpg","DSC_0597.jpg",
+    "DSC_0598.jpg","DSC_0599.jpg","DSC_0600.jpg","DSC_0603.jpg","DSC_0604.jpg",
+    "DSC_0606.jpg","DSC_0607.jpg","DSC_0610.jpg","DSC_0611.jpg","DSC_0614.jpg",
+    "DSC_0615.jpg","DSC_0622.jpg","DSC_0623.jpg","DSC_0624.jpg","DSC_0625.jpg",
+    "DSC_0626.jpg","DSC_0627.jpg","DSC_0644.jpg","DSC_0645.jpg","DSC_0649.jpg",
+    "DSC_0650.jpg","DSC_0652.jpg","DSC_0654.jpg","DSC_0656.jpg","DSC_0657.jpg",
+    "DSC_0658.jpg","DSC_0665.jpg","DSC_0666.jpg","DSC_0670.jpg","DSC_0673.jpg",
+    "DSC_0674.jpg","DSC_0679.jpg","DSC_0685.jpg","DSC_0686.jpg","DSC_0687.jpg",
+    "DSC_0688.jpg","DSC_0689.jpg","DSC_0690.jpg","DSC_0692.jpg","DSC_0392.jpg",
+    "DSC_0399.jpg"
+  ];
+
+  images.forEach(file => {
+    const img = document.createElement("img");
+    img.src = "photos/Chelsea U12 Knights/Game 6/" + file;
+    gallery.appendChild(img);
+  });
+</script>
+
+</body>
+</html>
