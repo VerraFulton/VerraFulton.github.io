@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,32 +12,29 @@
         background: #0033A0; /* Royal Blue */
         color: white;
         text-align: center;
+        padding-bottom: 40px;
     }
 
     header {
         background: #0033A0;
         padding: 20px;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: bold;
+        color: white;
         text-transform: uppercase;
+        letter-spacing: 2px;
         border-bottom: 3px solid white;
     }
 
-    .logo {
-        width: 120px;
-        margin-top: 10px;
-    }
-
-    .section-title {
+    h2 {
+        margin-top: 30px;
         font-size: 26px;
-        margin-top: 25px;
-        margin-bottom: 10px;
-        font-weight: bold;
+        color: white;
     }
 
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 20px;
         padding: 20px;
         max-width: 1000px;
@@ -55,42 +51,49 @@
     a.back {
         display: inline-block;
         margin-top: 20px;
-        padding: 10px 20px;
-        background: white;
-        color: #0033A0;
-        font-weight: bold;
-        border-radius: 8px;
+        font-size: 18px;
+        color: white;
         text-decoration: none;
+        font-weight: bold;
+    }
+
+    .logo {
+        width: 120px;
+        margin-top: 20px;
     }
 </style>
 </head>
 
 <body>
 
-<header>
-    U12 Knights – Game 3<br>
-    Knights vs Barton
-    <br>
-    <img class="logo" src="photos/Chelsea%20U12%20Knights/logo.jpeg" alt="Knights Logo">
-</header>
+<header>U12 Knights – Game 3<br>Knights vs Barton</header>
 
-<div class="section-title">Game 3 Photo Gallery</div>
+<img class="logo" src="photos/Chelsea U12 Knights/logo.jpeg" alt="Team Logo">
+
+<h2>Photo Gallery</h2>
 
 <div class="gallery" id="gallery"></div>
 
-<a class="back" href="U12-Knights.html">← Back to Knights Home</a>
+<a class="back" href="U12-Knights.html">← Back to Knights Landing Page</a>
 
 <script>
-    const gallery = document.getElementById("gallery");
+  const gallery = document.getElementById("gallery");
 
-    // List every photo in the Game 3 folder
-    const photos = [
-        "DSC_0131.JPG",
-        "DSC_0132.JPG",
-        "DSC_0133.JPG",
-        "DSC_0134.JPG",
-        "DSC_0135.JPG",
-        "DSC_0136.JPG",
-        "DSC_0137.JPG",
-        "DSC_0138.JPG",
-        "
+  const images = [
+    "DSC_0125.jpg","DSC_0131.jpg","DSC_0132.jpg","DSC_0155.jpg","DSC_0163.jpg",
+    "DSC_0171.jpg","DSC_0181.jpg","DSC_0189.jpg","DSC_0192.jpg","DSC_0193.jpg",
+    "DSC_0201.jpg","DSC_0203.jpg","DSC_0204.jpg","DSC_0205.jpg","DSC_0206.jpg",
+    "DSC_0227.jpg","DSC_0005.jpg","DSC_0008.jpg","DSC_0038.jpg","DSC_0044.jpg",
+    "DSC_0064.jpg","DSC_0076.jpg","DSC_0091.jpg","DSC_0092.jpg","DSC_0094.jpg",
+    "DSC_0112.jpg","DSC_0113.jpg"
+  ];
+
+  images.forEach(file => {
+    const img = document.createElement("img");
+    img.src = "photos/Chelsea U12 Knights/Game 3/thumbs/" + file;
+    gallery.appendChild(img);
+  });
+</script>
+
+</body>
+</html>
