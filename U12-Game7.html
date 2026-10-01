@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>U12 Knights vs. Seaford – Game 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0033A0; /* Royal Blue */
+        color: white;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    header {
+        background: #0033A0;
+        padding: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 3px solid white;
+    }
+
+    h2 {
+        margin-top: 30px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        border: 3px solid white;
+        object-fit: cover;
+    }
+
+    a.back {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .logo {
+        width: 120px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>U12 Knights vs. Seaford – Game 7</header>
+
+<img class="logo" src="photos/Chelsea U12 Knights/logo.jpeg" alt="Team Logo">
+
+<h2>Photo Gallery</h2>
+
+<div class="gallery" id="gallery"></div>
+
+<a class="back" href="U12-Knights.html">← Back to Knights Landing Page</a>
+
+<script>
+  const gallery = document.getElementById("gallery");
+
+  const images = [
+    "DSC_0365.jpg","DSC_0366.jpg","DSC_0370.jpg","DSC_0373.jpg","DSC_0375.jpg",
+    "DSC_0376.jpg","DSC_0379.jpg","DSC_0382.jpg","DSC_0384.jpg","DSC_0385.jpg",
+    "DSC_0386.jpg","DSC_0387.jpg","DSC_0390.jpg","DSC_0391.jpg","DSC_0395.jpg",
+    "DSC_0396.jpg","DSC_0397.jpg","DSC_0398.jpg","DSC_0402.jpg","DSC_0403.jpg",
+    "DSC_0405.jpg","DSC_0406.jpg","DSC_0407.jpg","DSC_0409.jpg","DSC_0411.jpg",
+    "DSC_0412.jpg","DSC_0413.jpg","DSC_0416.jpg","DSC_0417.jpg","DSC_0418.jpg",
+    "DSC_0421.jpg","DSC_0425.jpg","DSC_0426.jpg","DSC_0430.jpg","DSC_0433.jpg",
+    "DSC_0436.jpg","DSC_0437.jpg","DSC_0438.jpg","DSC_0441.jpg","DSC_0443.jpg",
+    "DSC_0446.jpg","DSC_0448.jpg","DSC_0453.jpg","DSC_0454.jpg","DSC_0455.jpg",
+    "DSC_0457.jpg","DSC_0461.jpg","DSC_0467.jpg","DSC_0468.jpg","DSC_0469.jpg",
+    "DSC_0473.jpg","DSC_0477.jpg","DSC_0488.jpg","DSC_0491.jpg","DSC_0493.jpg",
+    "DSC_0495.jpg","DSC_0496.jpg","DSC_0497.jpg","DSC_0498.jpg","DSC_0499.jpg",
+    "DSC_0500.jpg","DSC_0501.jpg","DSC_0502.jpg","DSC_0503.jpg","DSC_0509.jpg",
+    "DSC_0510.jpg","DSC_0511.jpg","DSC_0512.jpg","DSC_0514.jpg","DSC_0515.jpg",
+    "DSC_0516.jpg","DSC_0517.jpg","DSC_0518.jpg","DSC_0522.jpg","DSC_0523.jpg",
+    "DSC_0524.jpg","DSC_0525.jpg","DSC_0526.jpg","DSC_0527.jpg","DSC_0528.jpg",
+    "DSC_0529.jpg","DSC_0530.jpg","DSC_0533.jpg","DSC_0536.jpg","DSC_0539.jpg",
+    "DSC_0540.jpg","DSC_0541.jpg","DSC_0542.jpg","DSC_0543.jpg","DSC_0544.jpg",
+    "DSC_0547.jpg","DSC_0548.jpg","DSC_0551.jpg","DSC_0552.jpg","DSC_0556.jpg",
+    "DSC_0560.jpg","DSC_0561.jpg","DSC_0565.jpg","DSC_0567.jpg","DSC_0568.jpg",
+    "DSC_0569.jpg","DSC_0570.jpg","DSC_0571.jpg","DSC_0572.jpg","DSC_0573.jpg",
+    "DSC_0574.jpg","DSC_0575.jpg","DSC_0577.jpg","DSC_0578.jpg","DSC_0580.jpg",
+    "DSC_0581.jpg","DSC_0583.jpg","DSC_0586.jpg","DSC_0588.jpg","DSC_0589.jpg",
+    "DSC_0591.jpg","DSC_0592.jpg","DSC_0595.jpg","DSC_0596.jpg","DSC_0599.jpg",
+    "DSC_0606.jpg","DSC_0607.jpg","DSC_0609.jpg","DSC_0610.jpg","DSC_0611.jpg",
+    "DSC_0613.jpg","DSC_0614.jpg","DSC_0617.jpg","DSC_0619.jpg","DSC_0620.jpg",
+    "DSC_0621.jpg","DSC_0624.jpg","DSC_0628.jpg","DSC_0631.jpg","DSC_0633.jpg",
+    "DSC_0635.jpg","DSC_0636.jpg","DSC_0637.jpg","DSC_0639.jpg","DSC_0640.jpg",
+    "DSC_0641.jpg","DSC_0643.jpg","DSC_0647.jpg","DSC_0649.jpg","DSC_0650.jpg",
+    "DSC_0651.jpg","DSC_0652.jpg","DSC_0654.jpg","DSC_0655.jpg","DSC_0658.jpg",
+    "DSC_0660.jpg","DSC_0661.jpg","DSC_0662.jpg","DSC_0663.jpg","DSC_0665.jpg",
+    "DSC_0669.jpg","DSC_0672.jpg","DSC_0673.jpg","DSC_0674.jpg","DSC_0675.jpg",
+    "DSC_0679.jpg","DSC_0680.jpg","DSC_0681.jpg","DSC_0682.jpg","DSC_0683.jpg"
+  ];
+
+  images.forEach(file => {
+    const img = document.createElement("img");
+    img.src = "photos/Chelsea U12 Knights/Game 7/" + file;
+    gallery.appendChild(img);
+  });
+</script>
+
+</body>
+</html>
